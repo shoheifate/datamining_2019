@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class LinearRegression:
     """
     >>> import regression
@@ -26,6 +28,18 @@ class LinearRegression:
         temp = np.linalg.inv(np.dot(x.T,x))
         self.theta = np.dot(np.dot(temp,x.T),y)
     def predict(self,x):
-        pass
+        """
+        >>> import importlib
+        >>> import datasets
+        >>> import regression
+        >>> X,Y = datasets.load_linear_example1()
+        >>> importlib.reload(regression)
+        <module 'regression' from '/Users/e175752/datamining/regression-test/regression.py'>
+        >>> model = regression.LinearRegression()
+        >>> model.fit(X,Y)
+        >>> model.predict(X)
+        array([ 7.28350515,  9.2628866 , 11.7371134 , 13.71649485])
+        """
+        return np.dot(x, self.theta)
     def score(self,x,y):
         pass
