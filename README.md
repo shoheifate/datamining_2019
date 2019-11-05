@@ -1,0 +1,2 @@
+# datamining_2019
+2019年度のdataminingの講義でのgithub
